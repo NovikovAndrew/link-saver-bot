@@ -1,12 +1,15 @@
 package storage
 
 import (
-	e "bot-saver/package/error"
+	"bot-saver/package/error"
 	"crypto/sha256"
+	"errors"
 	"fmt"
 	"io"
 	"time"
 )
+
+var ErrNoSavedPage = errors.New("no saved pages")
 
 type Page struct {
 	URL      string

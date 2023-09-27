@@ -9,4 +9,6 @@ const (
 
 type Event struct {
 	Type Type
+	Text string
+	Meta interface{}
 }
